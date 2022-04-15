@@ -1,0 +1,181 @@
+.app {
+  width: 100%;
+  padding: 24px;
+}
+
+.navbar {
+  height: 86px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #527677;
+  padding: 0px 24px;
+}
+
+.navbar > .logo {
+  width: 150px;
+}
+
+.app-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.css-1nrlq1o-MuiFormControl-root {
+  width: max(15%, 150px);
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 150px;
+}
+
+.table {
+  border-radius: 12px;
+  border: 1px solid #cdd0d1;
+  border-bottom: none;
+  overflow: hidden;
+}
+
+.date-cell {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em;
+  align-items: center;
+  height: 78px;
+  width: 200px;
+  flex-shrink: 0;
+  border-right: 1px solid #cdd0d1;
+  border-bottom: 1px solid #cdd0d1;
+}
+
+.grid:last-child .date-cell {
+  border-bottom: none;
+}
+
+.grid:last-child .total-hours {
+  border-bottom: none;
+}
+
+.table-head {
+  height: 58px;
+  background: #f7f7f7;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
+  width: 100%;
+  border-bottom: 1px solid #cdd0d1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-head__date, .table-head__hours {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em;
+  align-items: center;
+  height: 78px;
+  width: 200px;
+  border-right: 1px solid #cdd0d1;
+}
+
+.table-head__hours {
+  width: 110px;
+  justify-content: center;
+  border: none;
+  border-left: 1px solid #cdd0d1;
+}
+
+.calculator {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.calculator-column {
+  display: flex;
+  flex-direction: column;
+    gap: 12px;
+
+}
+
+.calculator-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.calculator-row span {
+    text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.hours-sum {
+  height: 52.71px;
+  width: 110px;
+  width: 120px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 12px;
+  align-items: center;
+  border-radius: 4px;
+
+}
+
+.date-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cdd0d1;
+}
+
+.hours-cell {
+  display: flex;
+  gap: 12px;
+  margin-left: 12px;
+}
+
+.timepickers {
+  display: flex;
+  align-items: center;
+}
+
+.hours-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.hours-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.total-hours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #cdd0d1;
+  border-bottom: 1px solid #cdd0d1;
+  height: 78px;
+  width: 110px;
+
+}
+
+
+/* Buttons */
+
+.btn {
+  padding: 12px;
+}
+
+.btn-hours {}
+
+.btn-hours img {
+  width: 18px;
+}
