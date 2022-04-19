@@ -9,19 +9,18 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 let theme = createTheme({
   typography: {
-    fontFamily: 'Poppins, san-serif',
-    fontSize: 12
+    fontFamily: 'IBM Plex Sans, san-serif',
+    fontSize: 14
   },
   palette: {
     primary: {
-      main: '#fff',
+      main: '#759192',
     },
     secondary: {
       main: '#527677',
     },
   },
 });
-
 
 
 function App() {

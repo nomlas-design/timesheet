@@ -1,6 +1,7 @@
 import { SetStateAction, useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import TimePicker from '@mui/lab/TimePicker';
+import DayTasks from './DayTasks'
 import dayjs from 'dayjs';
 
 type DropdownProps = {
@@ -46,6 +47,7 @@ export default function TimeInOut({ handleHoursChange }: DropdownProps) {
         onChange={handleOutChange}
         renderInput={(params) => <TextField {...params} />}
       />
+      <DayTasks />
     </div>
 
   )

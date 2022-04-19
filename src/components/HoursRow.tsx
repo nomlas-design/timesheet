@@ -30,7 +30,6 @@ export default function HoursRow({ handleTotalHours }: DropdownProps) {
   }, [hours]);
 
   useEffect(() => {
-    console.log(totalHours)
     handleTotalHours(totalHours)
   }, [totalHours])
 
@@ -57,20 +56,20 @@ export default function HoursRow({ handleTotalHours }: DropdownProps) {
   const buttonStyles = {
     padding: 0.2,
     minWidth: 0,
-    marginLeft: 1
+    marginLeft: 1,
   }
 
   return (
     <div className='hours-wrapper'>
       <div className='timepickers'>
         <div className='hours-row'>{hoursList}</div>
+        {hoursList.length != 0 && <Tooltip title="Remove Time Picker">
+          <Button sx={buttonStyles} color="error" onClick={decremenetHandler} ><RemoveIcon /></Button>
+        </Tooltip>}
         {hoursList.length < 3 &&
           <Tooltip title="Add Time Picker">
             <Button sx={buttonStyles} color="success" onClick={incremenetHandler}><AddIcon /></Button>
           </Tooltip>}
-        <Tooltip title="Remove Time Picker">
-          <Button sx={buttonStyles} color="error" onClick={decremenetHandler} ><RemoveIcon /></Button>
-        </Tooltip>
       </div>
       <div className="total-hours">{totalHours} hrs</div>
     </div>

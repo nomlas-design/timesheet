@@ -13,7 +13,7 @@
   padding: 0px 24px;
 }
 
-.navbar > .logo {
+.navbar>.logo {
   width: 150px;
 }
 
@@ -25,11 +25,11 @@
 }
 
 .css-1nrlq1o-MuiFormControl-root {
-  width: max(15%, 150px);
+  width: 200px;
 }
 
 .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
-  width: 150px;
+  width: 200px;
 }
 
 .table {
@@ -99,7 +99,7 @@
 .calculator-column {
   display: flex;
   flex-direction: column;
-    gap: 12px;
+  gap: 12px;
 
 }
 
@@ -111,7 +111,7 @@
 }
 
 .calculator-row span {
-    text-transform: uppercase;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 0.9em;
 }

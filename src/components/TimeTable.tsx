@@ -11,6 +11,7 @@ dayjs.locale(Locale)
 
 export default function Table() {
 
+
   const [startDate, setStartDate] = useState<any>(dayjs());
   const [dateList, setDateList] = useState<Array<string>>([]);
   const [frequency, setFrequency] = useState<number>(8);
@@ -23,20 +24,20 @@ export default function Table() {
 
   useEffect(() => {
     calculateTotalHours();
-  }, [totalHours])
+  }, [totalHours]);
 
 
   function generateDates(date: Date | string, number: number) {
     // Reset lists
     setDateList([])
-    setTotalHours({})
 
     for (let i = 0; i < number - 1; i++) {
       let next: string = dayjs(date).add(i, 'day').format('ddd, MMM D');
       setDateList(list => [...list, next]);
-      setTotalHours(totalHours => ({ ...totalHours, [next]: 0 }))
+      // setTotalHours(totalHours => ({ ...totalHours, [next]: 0 }))
     }
   }
+
 
   function addDayHours(hours: React.SetStateAction<number>, date: string) {
     hours !== undefined && setTotalHours({ ...totalHours, [date]: hours })
@@ -44,7 +45,8 @@ export default function Table() {
 
   function calculateTotalHours() {
     // Check object isn't empty and calculate total hours
-    const hours = Object.keys(totalHours).length !== 0 && Object.values(totalHours).reduce((val, total) => val + total);
+    const hours: number = Object.keys(totalHours).length !== 0 && Object.values(totalHours).reduce((val, total) => val + total);
+    console.log(hours)
     setHoursSum(hours);
   }
 
@@ -61,12 +63,12 @@ export default function Table() {
             <div className='table-head__hours'>Total</div>
           </div>
           <div className='grid'>
-            {dateList.map((value: string, index: number) => {
-              return <div key={index} className='date-row'>
+            {dateList.map((value: string, index: number) =>
+              <div key={value} className='date-row'>
                 <div className='date-cell'>{value}</div>
-                <HoursRow key={value} handleTotalHours={(hours: React.SetStateAction<number>) => addDayHours(hours, value)} />
+                <HoursRow key={index} handleTotalHours={(hours: React.SetStateAction<number>) => addDayHours(hours, value)} />
               </div>
-            })}
+            )}
           </div>
         </div>
         <div className='calculator'>
